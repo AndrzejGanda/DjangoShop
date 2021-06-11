@@ -26,7 +26,6 @@ def category(request, id):
 
 def items(request, id):
     items_user = Items.objects.get(pk=id)
-    inscription = "<h1>" + str(items_user) + "</h1>" + \
-                  "<p>" + str(items_user.statistics) + "</p>" + \
-                  "<p>" + str(items_user.price) + "</p>"
-    return HttpResponse(inscription)
+    allcate = Category.objects.all()
+    dane = {'items_user': items_user, 'category': allcate}
+    return render(request, 'item.html', dane)

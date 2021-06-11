@@ -5,14 +5,19 @@
   <title>ShopFantasy</title>
 </head>
 <body>
-<h1> ShopFantasy </h1>
-
-<h3> See our offer </h3>
-
-{% for cat in category %}
-
-<p><a href = "category/{{ cat.id }}">{{ cat.name }} </a></p>
-
-{% endfor %}
+<div>
+  <h1> SHOPFANTASY    search    logout</h1>
+</div>
+<div style="clear:both"></div>
+<div style="width:200px; float:left">
+  <h3> See our offer </h3>
+  {% for cat in category %}
+    <p><a href = "/category/{{ cat.id }}">{{ cat.name }} </a></p>
+  {% endfor %}
+</div>
+<div style="width:700px; float:left">
+  {% block item %}  {% endblock item %}
+</div>
+<div style="clear:both"></div>
 </body>
 </html>

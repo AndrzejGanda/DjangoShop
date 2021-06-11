@@ -1,0 +1,12 @@
+{% extends 'templates1.html' %}
+
+{% block item %}
+{% if items_user %}
+    <h1> {{ items_user.name}} </h1>
+    <p> Creator: {{ items_user.creator}}</p>
+    <p> {{ items_user.statistics}} </p>
+    <p> {{ items_user.price}} </p>
+{% else %}
+    <p> there is no such product </p>
+{% endif %}
+{% endblock item %}
