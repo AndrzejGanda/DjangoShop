@@ -1,23 +1,40 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>ShopFantasy</title>
+
+  <link rel="stylesheet" type="text/css" href="{% static "/polls/style.css"%}">
+<style type=text/css>
+
+a {
+text-decoration: none;
+}
+
+a:link{color:#0000ff;}
+a:visited{color:#0000ff;}
+a:hover{font-size:150%;}
+</style>
 </head>
-<body>
-<div>
-  <h1> SHOPFANTASY    search    logout</h1>
+<body id='bg'>
+<div id="kontener">
+  <div class="all">
+    <div class="main"><h3>SEARCH</h3></div>
+    <div class="left"><h2>SHOP FANTASY</h2></div>
+    <div class="right"><h3>Logout</h3></div>
+  </div>
+  <div style="clear:both"></div>
+  <div class="menu" style="width:200px; float:left;">
+    <h3> MENU </h3>
+    {% for cat in category %}
+      <p><a href = "/category/{{ cat.id }}">{{ cat.name }} </a></p>
+    {% endfor %}
+  </div>
+  <div class="shop">
+
+    {% block item %}  {% endblock item %}
+
+  </div>
+  <div style="clear:both"></div>
 </div>
-<div style="clear:both"></div>
-<div style="width:200px; float:left">
-  <h3> See our offer </h3>
-  {% for cat in category %}
-    <p><a href = "/category/{{ cat.id }}">{{ cat.name }} </a></p>
-  {% endfor %}
-</div>
-<div style="width:700px; float:left">
-  {% block item %}  {% endblock item %}
-</div>
-<div style="clear:both"></div>
 </body>
 </html>

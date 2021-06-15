@@ -8,7 +8,7 @@ from .models import Items, Category
 
 def index(request):
     # req = Items.objects.all()
-    # one = Items.objects.get(pk=2)
+    #  one = Items.objects.get(pk=2)
     # cate = Items.objects.filter(category=5)
     # crea = Items.objects.filter(creator=1)
     # cate_name = Category.objects.get(id=1)
@@ -21,7 +21,12 @@ def index(request):
 
 def category(request, id):
     category_user = Category.objects.get(pk=id)
-    return HttpResponse(category_user.name)
+    category_item = Items.objects.filter(category = category_user)
+    allcate = Category.objects.all()
+    dane = {'category_user' : category_user,
+            'category_item' : category_item,
+            'category' : allcate }
+    return render(request, 'category_item.html', dane)
 
 
 def items(request, id):

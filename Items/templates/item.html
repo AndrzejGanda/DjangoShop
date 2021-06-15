@@ -2,11 +2,11 @@
 
 {% block item %}
 {% if items_user %}
-    <h1> {{ items_user.name}} </h1>
-    <p> Creator: {{ items_user.creator}}</p>
-    <p> {{ items_user.statistics}} </p>
-    <p> {{ items_user.price}} </p>
+    <h1><span> {{ items_user.name}} </span></h1>
+    <p><span> Creator: {{ items_user.creator}}</span></p>
+    <p><span> {{ items_user.statistics}} </span></p>
+    <p><span> {{ items_user.price}} </span></p>
 {% else %}
-    <p> there is no such product </p>
+    <p><span> there is no such product </span></p>
 {% endif %}
 {% endblock item %}
