@@ -8,20 +8,14 @@ h1 {
 color:black;
 
 }
-
-.menu {
-color:orange;
-background-color: red;
-
-}
 html{
 margin: 50px;
 padding: 50px;
 }
 .shop{
     position: absolute;
-  top: 30%;
-  right: 40%;
+  top: 25%;
+  right: 37%;
   width: 20%;
   text-align: center;
   font-size: 18px;
@@ -44,11 +38,12 @@ width: 960px; height: 100%; margin: 0 auto;
 }
 .menu {
 width: 100%; min-height: 100%; background: red;
+color: orange;
 }
 
 
 .all {
-	padding: 0 250px; /* padding = długość lewych paneli */
+	padding: 0 300px; /* padding = długość lewych paneli */
 	min-width: 460px  /* minimalna długość środka */
 }
 .main {
@@ -56,12 +51,13 @@ width: 100%; min-height: 100%; background: red;
 	float: left;
 	overflow: hidden;
 	width: 100%
+
 }
 .left {
 	position: relative;
 	float: left;
 	width: 230px;
-	right: 250px; /* 230 + 20 padding */
+	right: 350px;
 	margin-left: -100%;
 	padding: 0 10px
 
@@ -70,6 +66,6 @@ width: 100%; min-height: 100%; background: red;
 	position: relative;
 	float: left;
 	width: 230px;
-	margin-right: -250px; /* -230 - 20 padding */
+	margin-right: -260px;
 	padding: 0 10px
 }
