@@ -39,3 +39,5 @@ class Items(models.Model):
     class Meta:
         verbose_name = "Item"
         verbose_name_plural = "Items"
+
+

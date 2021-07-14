@@ -18,8 +18,12 @@ from django.urls import path
 from Items.views import *
 
 
+
 urlpatterns = [
+    path('register/', register_request, name="register"),
     path('admin/', admin.site.urls),
+    path('logout/', logout_request, name="logout"),
+    path('login/', login_request, name="login"),
     path('', index),
     path('category/<id>/', category, name='category'),
     path('items/<id>/', items, name='items'),
