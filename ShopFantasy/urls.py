@@ -18,7 +18,6 @@ from django.urls import path
 from Items.views import *
 
 
-
 urlpatterns = [
     path('register/', register_request, name="register"),
     path('admin/', admin.site.urls),
@@ -27,4 +26,5 @@ urlpatterns = [
     path('', index),
     path('category/<id>/', category, name='category'),
     path('items/<id>/', items, name='items'),
+    path('search/', get_queryset, name='search_results'),
 ]

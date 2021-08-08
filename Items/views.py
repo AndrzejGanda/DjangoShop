@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.db.models import Q
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Items, Category
@@ -81,3 +82,11 @@ def logout_request(request):
     if not request.user.is_authenticated:
         return redirect('%s?next=%s' % (settings.LOGOUT_REDIRECT_URL, request.path))
 
+def get_queryset(request):
+    query = request.GET.get('search')
+    includes = Items.objects.filter(Q(name__icontains=query))
+    allcate = Category.objects.all()
+    dane = {'includes': includes,
+            'category': allcate
+            }
+    return render(request, 'search-product.html', dane)

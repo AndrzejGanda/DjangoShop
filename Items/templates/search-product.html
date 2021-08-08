@@ -1,0 +1,13 @@
+{% extends 'templates1.html' %}
+
+{% block item %}
+
+
+
+    {% for item in includes %}
+      <p><a href ="/items/{{ item.id }}/"> {{ item.name }}</a></p>
+    {% endfor %}
+
+
+
+{% endblock item %}
