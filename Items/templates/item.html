@@ -6,6 +6,7 @@
     <p><span> Creator: {{ items_user.creator}}</span></p>
     <p><span> {{ items_user.statistics}} </span></p>
     <p><span> {{ items_user.price}} </span></p>
+    <button id="{{items_user.id}}"class="btn atc btn-warning">Add to cart</button>
 {% else %}
     <p><span> there is no such product </span></p>
 {% endif %}

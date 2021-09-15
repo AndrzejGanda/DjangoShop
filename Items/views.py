@@ -84,7 +84,12 @@ def logout_request(request):
 
 def get_queryset(request):
     query = request.GET.get('search')
-    includes = Items.objects.filter(Q(name__icontains=query))
+    if query == 'all':
+        includes = Items.objects.all()
+    elif query != '' and query is not None:
+        includes = Items.objects.filter(Q(name__icontains=query))
+    else:
+        includes = ''
     allcate = Category.objects.all()
     dane = {'includes': includes,
             'category': allcate

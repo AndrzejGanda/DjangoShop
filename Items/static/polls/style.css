@@ -25,7 +25,9 @@ padding: 50px;
     font-weight: bold;
     background: rgba(82,136,217,.5);
 }
-
+.navbar navbar-light{
+background-color: brown;
+}
 
 #kontener {
 background-repeat: no-repeat;
@@ -41,40 +43,8 @@ width: 100%; min-height: 100%; background: red;
 color: orange;
 }
 
+li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
 
-.all {
-	padding: 0 350px; /* padding = długość lewych paneli */
-	min-width: 460px  /* minimalna długość środka */
-}
-.main {
-	position: relative;
-	bottom: -20px;
-	float: left;
-	overflow: hidden;
-	width: 50%
-
-
-}
-.main2 {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	width: 25%
-
-}
-.left {
-	position: relative;
-	float: left;
-	width: 230px;
-	right: 230px;
-	margin-left: -100%;
-
-
-}
-.right {
-	position: relative;
-	float: right;
-	width: 230px;
-	margin-right: -260px;
-	padding: 0 20px
-}
